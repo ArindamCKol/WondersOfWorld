@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- arrays of hints-->
+    <array name="hints">
+        <item>@array/angkorwat_hints</item>
+        <item>@array/colosseum_hints</item>
+        <item>@array/greatwall_hints</item>
+        <item>@array/leaning_tower_hints</item>
+        <item>@array/machupicchu_hints</item>
+        <item>@array/petra_hints</item>
+        <item>@array/pyramidsofgiza_hints</item>
+        <item>@array/tajmahal_hints</item>
+        <item>@array/teotihuacan_hints</item>
+        <item>@array/tigernest_hints</item>
+    </array>
+
+    <string-array name="angkorwat_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="colosseum_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="greatwall_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="leaning_tower_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="machupicchu_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="petra_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="pyramidsofgiza_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="tajmahal_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="teotihuacan_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+    <string-array name="tigernest_hints">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+        <item>Hint5</item>
+        <item>Hint6</item>
+        <item>Hint7</item>
+        <item>Hint8</item>
+        <item>Hint9</item>
+    </string-array>
+</resources>

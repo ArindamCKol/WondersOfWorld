@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Wonders Of World</string>
+    <string name="hint">Show Hint</string>
+
+    <!-- Array of names of Wonder. If new wonder added or any wonder removed
+       hints_array and image_list also need to change. Also need to maintain
+       same sequence -->
+
+    <string-array name="wonder_names">
+        <item>Angkor Wat</item>
+        <item>Colosseum</item>
+        <item>Great Wall</item>
+        <item>Leaning Tower</item>
+        <item>Machu Picchu</item>
+        <item>Petra</item>
+        <item>Pyramids of Giza</item>
+        <item>Tajmahal</item>
+        <item>Teotihuacan</item>
+        <item>Tiger Nest</item>
+    </string-array>
+
+    <!-- Image array -->
+    <array name="image_list">
+        <item>@drawable/angkorwat</item>
+        <item>@drawable/colosseum</item>
+        <item>@drawable/greatwall</item>
+        <item>@drawable/leaningtower</item>
+        <item>@drawable/machupicchu</item>
+        <item>@drawable/petra</item>
+        <item>@drawable/pyramidsofgiza</item>
+        <item>@drawable/tajmahal</item>
+        <item>@drawable/teotihuacan</item>
+        <item>@drawable/tigersnest</item>
+    </array>
+
+</resources>
