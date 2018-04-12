@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImageView;
     private TextView hintTextView;
     private LinearLayout rootLayout;
+    private Button hintButton;
     private ArrayList <Wonder> wonders = new ArrayList<Wonder>();
 
     @Override
@@ -33,15 +35,17 @@ public class MainActivity extends AppCompatActivity {
         rootLayout = findViewById(R.id.root_layout);
         mImageView = findViewById(R.id.image);
         hintTextView = findViewById(R.id.hint_textview);
-        hintTextView.setText(wonders.get(position).getName());
+        hintButton = findViewById(R.id.show_hint);
         mImageView.setImageResource(wonders.get(position).getImageId());
         position++;
     }
 
     public void nextImage (View view) {
         mImageView.setImageResource(wonders.get(position).getImageId());
-        hintTextView.setText(wonders.get(position).getName());
         position++;
+        hintButton.setClickable(true);
+        hintButton.setAlpha(1f);
+        hintNumber=0;
         if(position>9) {position=0;}
         for (int i=0; i<3; i++) {
             for (int j=0; j<3; j++) {
@@ -62,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         setChildViewVisibility(viewRow, viewCol,viewTable[viewRow][viewCol]);
         hintTextView.setText(wonders.get(position).getHint(hintNumber));
         hintNumber++;
+        if (hintNumber>8) {
+            hintButton.setClickable(false);
+            hintButton.setAlpha(.5f);
+        }
     }
 
     public void setChildViewVisibility(int row, int col, float alphaValue) {
