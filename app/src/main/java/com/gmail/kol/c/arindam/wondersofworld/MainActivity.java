@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private int position = 0;
     private int hintNumber = 0;
     private float[][] viewTable = {{0.95f,0.95f,0.95f},{0.95f,0.95f,0.95f},{0.95f,0.95f,0.95f}};
+    private RadioGroup optionRadioGroup;
     private ImageView mImageView;
     private TextView hintTextView;
     private LinearLayout rootLayout;
@@ -33,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
         setWondersData();
 
         rootLayout = findViewById(R.id.root_layout);
-        mImageView = findViewById(R.id.image);
+        optionRadioGroup = findViewById(R.id.options_radio_group);
         hintTextView = findViewById(R.id.hint_textview);
         hintButton = findViewById(R.id.show_hint);
+        mImageView = findViewById(R.id.image);
         mImageView.setImageResource(wonders.get(position).getImageId());
         position++;
+        setOption();
     }
 
     public void nextImage (View view) {
@@ -45,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         position++;
         hintButton.setClickable(true);
         hintButton.setAlpha(1f);
+        setOption();
         hintNumber=0;
         if(position>9) {position=0;}
         for (int i=0; i<3; i++) {
@@ -84,21 +90,20 @@ public class MainActivity extends AppCompatActivity {
         String [] wonder_name = res.getStringArray(R.array.wonder_names);
         TypedArray imageList = res.obtainTypedArray(R.array.image_list);
         TypedArray hintList = res.obtainTypedArray(R.array.hints);
+        TypedArray optionList = res.obtainTypedArray(R.array.radiogroup_options);
 
         for (int i=0; i<imageList.length(); i++) {
             String [] tempHintArray = res.getStringArray(hintList.getResourceId(i,0));
-            Wonder temp = new Wonder(imageList.getResourceId(i,R.drawable.ic_launcher_foreground),wonder_name[i],tempHintArray);
+            String [] tempOptionArray = res.getStringArray(optionList.getResourceId(i,0));
+            Wonder temp = new Wonder(imageList.getResourceId(i,R.drawable.ic_launcher_foreground),wonder_name[i],tempHintArray,tempOptionArray);
             wonders.add(temp);
         }
-//        wonders.add(new Wonder(R.drawable.angkorwat));
-//        wonders.add(new Wonder(R.drawable.colosseum));
-//        wonders.add(new Wonder(R.drawable.greatwall));
-//        wonders.add(new Wonder(R.drawable.leaningtower));
-//        wonders.add(new Wonder(R.drawable.machupicchu));
-//        wonders.add(new Wonder(R.drawable.petra));
-//        wonders.add(new Wonder(R.drawable.pyramidsofgiza));
-//        wonders.add(new Wonder(R.drawable.tajmahal));
-//        wonders.add(new Wonder(R.drawable.teotihuacan));
-//        wonders.add(new Wonder(R.drawable.tigersnest));
+    }
+
+    public void setOption () {
+        for (int i=0; i<optionRadioGroup.getChildCount(); i++) {
+            RadioButton tempRadioButton = (RadioButton) optionRadioGroup.getChildAt(i);
+            tempRadioButton.setText(wonders.get(position).getOption(i));
+        }
     }
 }

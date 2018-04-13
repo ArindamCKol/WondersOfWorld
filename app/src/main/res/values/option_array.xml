@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- arrays of option-->
+    <array name="radiogroup_options">
+        <item>@array/angkorwat_options</item>
+        <item>@array/colosseum_options</item>
+        <item>@array/greatwall_options</item>
+        <item>@array/leaning_tower_options</item>
+        <item>@array/machupicchu_options</item>
+        <item>@array/petra_options</item>
+        <item>@array/pyramidsofgiza_options</item>
+        <item>@array/tajmahal_options</item>
+        <item>@array/teotihuacan_options</item>
+        <item>@array/tigernest_options</item>
+    </array>
+
+    <string-array name="angkorwat_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="colosseum_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="greatwall_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="leaning_tower_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="machupicchu_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="petra_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="pyramidsofgiza_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="tajmahal_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="teotihuacan_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+    <string-array name="tigernest_options">
+        <item>Hint1</item>
+        <item>Hint2</item>
+        <item>Hint3</item>
+        <item>Hint4</item>
+    </string-array>
+</resources>
