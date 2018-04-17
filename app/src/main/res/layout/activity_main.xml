@@ -10,6 +10,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="@string/heading"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/score_text"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"/>
+        </LinearLayout>
         <com.gmail.kol.c.arindam.wondersofworld.SquareLayout
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
@@ -71,17 +87,10 @@
         </com.gmail.kol.c.arindam.wondersofworld.SquareLayout>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:onClick="nextImage" />
-
-        <Button
             android:id="@+id/show_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hint"
-            android:onClick="showHint"/>
+            android:text="@string/hint" />
 
         <TextView
             android:id="@+id/hint_textview"
@@ -106,6 +115,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
         </RadioGroup>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"/>
 
     </LinearLayout>
 </ScrollView>

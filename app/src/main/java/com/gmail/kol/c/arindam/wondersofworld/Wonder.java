@@ -4,6 +4,7 @@ package com.gmail.kol.c.arindam.wondersofworld;
  * Created by ARINDAM on 26-03-2018.
  */
 
+// class for Wonder object
 public class Wonder {
     private int imageId;
     private String name;
@@ -19,10 +20,10 @@ public class Wonder {
 
     public int getImageId () { return imageId; }
     public String getName () {return name;}
+    //return individual element of hintStringArray at given position
     public String getHint (int pos) {
         return hintStringArray[pos];
     }
-    public  String getOption (int pos) {
-        return optionStringArray[pos];
-    }
+    //return individual element of optionStringArray at given position
+    public  String getOption (int pos) { return optionStringArray[pos]; }
 }

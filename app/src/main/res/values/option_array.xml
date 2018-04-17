@@ -16,63 +16,63 @@
     </array>
 
     <string-array name="angkorwat_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Teotihuacan</item>
+        <item>Colosseum</item>
+        <item>Angkor Wat</item>
+        <item>Pyramids of Giza</item>
     </string-array>
     <string-array name="colosseum_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Colosseum</item>
+        <item>Petra</item>
+        <item>Leaning Tower</item>
+        <item>Great Wall</item>
     </string-array>
     <string-array name="greatwall_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Tiger Nest</item>
+        <item>Machu Picchu</item>
+        <item>Great Wall</item>
+        <item>Tajmahal</item>
     </string-array>
     <string-array name="leaning_tower_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Leaning Tower</item>
+        <item>Tajmahal</item>
+        <item>Colosseum</item>
+        <item>Tiger Nest</item>
     </string-array>
     <string-array name="machupicchu_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Angkor Wat</item>
+        <item>Machu Picchu</item>
+        <item>Great Wall</item>
+        <item>Teotihuacan</item>
     </string-array>
     <string-array name="petra_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Pyramids of Giza</item>
+        <item>Angkor Wat</item>
+        <item>Tajmahal</item>
+        <item>Petra</item>
     </string-array>
     <string-array name="pyramidsofgiza_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Machu Picchu</item>
+        <item>Teotihuacan</item>
+        <item>Colosseum</item>
+        <item>Pyramids of Giza</item>
     </string-array>
     <string-array name="tajmahal_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Petra</item>
+        <item>Tajmahal</item>
+        <item>Angkor Wat</item>
+        <item>Pyramids of Giza</item>
     </string-array>
     <string-array name="teotihuacan_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Pyramids of Giza</item>
+        <item>Colosseum</item>
+        <item>Teotihuacan</item>
+        <item>Angkor Wat</item>
     </string-array>
     <string-array name="tigernest_options">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
+        <item>Tiger Nest</item>
+        <item>Colosseum</item>
+        <item>Great Wall</item>
+        <item>Machu Picchu</item>
     </string-array>
 </resources>

@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 /**
  * Created by ARINDAM on 27-03-2018.
  */
+ //build a square relative layout
 
 public class SquareLayout extends RelativeLayout {
     public SquareLayout(Context context) {
@@ -21,6 +22,7 @@ public class SquareLayout extends RelativeLayout {
         super(context, attrs, defStyleAttr);
     }
 
+    //use of getMode method is not very clear. require future study
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -34,7 +36,11 @@ public class SquareLayout extends RelativeLayout {
         } else if (heightMode == MeasureSpec.EXACTLY && heightSize > 0) {
             size = heightSize;
         } else {
-            size = widthSize < heightSize ? widthSize : heightSize;
+            if (widthSize < heightSize ) {
+                size = widthSize;
+            } else {
+                size = heightSize;
+            }
         }
 
         int finalMeasureSpec = MeasureSpec.makeMeasureSpec(size, MeasureSpec.EXACTLY);

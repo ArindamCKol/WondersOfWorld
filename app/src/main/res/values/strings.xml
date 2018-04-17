@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Wonders Of World</string>
     <string name="hint">Show Hint</string>
+    <string name="submit">Submit</string>
+    <string name="heading">Identify the Image</string>
 
     <!-- Array of names of Wonder. If new wonder added or any wonder removed
-       hints_array and image_list also need to change. Also need to maintain
-       same sequence -->
+       hints_array, option_array and image_list also need to change. Also need
+       to maintain same sequence -->
 
     <string-array name="wonder_names">
         <item>Angkor Wat</item>
@@ -19,7 +21,7 @@
         <item>Tiger Nest</item>
     </string-array>
 
-    <!-- Image array -->
+    <!-- Image ID array -->
     <array name="image_list">
         <item>@drawable/angkorwat</item>
         <item>@drawable/colosseum</item>
