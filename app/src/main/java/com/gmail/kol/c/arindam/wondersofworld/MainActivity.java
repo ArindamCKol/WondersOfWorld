@@ -16,11 +16,20 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    static final String STATE_POSITION = "current_position";
+    static final String STATE_HINT = "current_hint";
+    static final String STATE_SCORE = "current_score";
+    static final String STATE_OPTION = "selected_radio_button";
+    static final String STATE_ALPHA_ROW1 = "current_alpha_value_array1";
+    static final String STATE_ALPHA_ROW2 = "current_alpha_value_array2";
+    static final String STATE_ALPHA_ROW3 = "current_alpha_value_array3";
 
     private int position = 0; //hold current position of wonder arraylist
-    private int hintNumber = 0; // hold current position of hint array of Wonder class
+    private int hintNumber = -1; // hold current position of hint array of Wonder class
     private int score = 0; // score for quiz
+    private int indexOfSelectedOption = -1;
     static final float BLURRED = 0.95f; // alpha value for blurred view widget
     static final float TRANSPARENT = 0f; // alpha value for transparent view widget
     // array to store current alpha value of 3X3 view widget
@@ -28,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup optionRadioGroup;
     private ImageView mImageView;
     private TextView hintTextView;
-    private TextView scoreText;
+    private TextView scoreTextView;
     private LinearLayout rootLayout;
     private Button hintButton;
     private Button submitButton;
@@ -44,34 +53,90 @@ public class MainActivity extends AppCompatActivity {
         rootLayout = findViewById(R.id.root_layout);
         optionRadioGroup = findViewById(R.id.options_radio_group);
         hintTextView = findViewById(R.id.hint_textview);
-        scoreText = findViewById(R.id.score_text);
+        scoreTextView = findViewById(R.id.score_text);
         hintButton = findViewById(R.id.show_hint);
         submitButton = findViewById(R.id.submit_button);
         mImageView = findViewById(R.id.image);
 
-        mImageView.setImageResource(wonders.get(position).getImageId());
-        scoreText.setText("Score : " + score);
+        submitButton.setClickable(false);
+        submitButton.setAlpha(0.5f);
+
+        if (savedInstanceState != null) {
+            position = savedInstanceState.getInt(STATE_POSITION);
+            hintNumber = savedInstanceState.getInt(STATE_HINT);
+            score = savedInstanceState.getInt(STATE_SCORE);
+            indexOfSelectedOption = savedInstanceState.getInt(STATE_OPTION);
+            viewTable[0] = savedInstanceState.getFloatArray(STATE_ALPHA_ROW1);
+            viewTable[1] = savedInstanceState.getFloatArray(STATE_ALPHA_ROW2);
+            viewTable[2] = savedInstanceState.getFloatArray(STATE_ALPHA_ROW3);
+
+            if (hintNumber>=8) {
+                hintButton.setClickable(false);
+                hintButton.setAlpha(.5f);
+            }
+
+            if (hintNumber>=0) {
+                hintTextView.setText(wonders.get(position).getHint(hintNumber));
+            }
+
+            if (indexOfSelectedOption>=0) {
+                RadioButton tempRadioButton = (RadioButton) optionRadioGroup.getChildAt(indexOfSelectedOption);
+                tempRadioButton.setChecked(true);
+                submitButton.setClickable(true);
+                submitButton.setAlpha(1f);
+            }
+
+            for (int i=0; i<3; i++) {
+                for (int j=0; j<3; j++) {
+                    setChildViewVisibility(i,j,viewTable[i][j]);
+                }
+            }
+        }
 
         setOption();
 
-        hintButton.setOnClickListener(new View.OnClickListener() {
+        mImageView.setImageResource(wonders.get(position).getImageId());
+        scoreTextView.setText(getString(R.string.score_text,score));
+
+        optionRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                indexOfSelectedOption = optionRadioGroup.indexOfChild(findViewById(i));
+                submitButton.setClickable(true);
+                submitButton.setAlpha(1f);
+            }
+        });
+        hintButton.setOnClickListener(this);
+        submitButton.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.submit_button :
+                checkResult();
+                break;
+
+            case R.id.show_hint :
                 showHint();
-            }
-        });
+                break;
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int optionSelected = (int) optionRadioGroup.getCheckedRadioButtonId()-1;
-                boolean isCorrect = (wonders.get(position).getOption(optionSelected)).equals(wonders.get(position).getName());
-                if (isCorrect) {
-                    nextImage();
-                }
-            }
-        });
+            default: break;
+        }
+    }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(STATE_POSITION, position);
+        outState.putInt(STATE_HINT,hintNumber);
+        outState.putInt(STATE_SCORE,score);
+        outState.putInt(STATE_OPTION,indexOfSelectedOption);
+        outState.putFloatArray(STATE_ALPHA_ROW1,viewTable[0]);
+        outState.putFloatArray(STATE_ALPHA_ROW2,viewTable[1]);
+        outState.putFloatArray(STATE_ALPHA_ROW3,viewTable[2]);
+
+        super.onSaveInstanceState(outState);
     }
 
     public void nextImage () {
@@ -79,12 +144,12 @@ public class MainActivity extends AppCompatActivity {
         if(position>9) {position=0;}
         mImageView.setImageResource(wonders.get(position).getImageId());
         setOption();
-        score = score + (10-hintNumber);
-        scoreText.setText("Score : " + score);
 
         hintButton.setClickable(true);
         hintButton.setAlpha(1f);
-        hintNumber=0;
+        hintNumber=-1;
+
+        hintTextView.setText(R.string.hintText);
         optionRadioGroup.clearCheck();
 
         for (int i=0; i<3; i++) {
@@ -97,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
 
     //show hints and randomly choose view to set transparent
     public void showHint ( ) {
+        hintNumber++;
+
         int viewRow = (int) (Math.random()*3);
         int viewCol = (int) (Math.random()*3);
         while(viewTable[viewRow][viewCol]==0f) {
@@ -106,10 +173,10 @@ public class MainActivity extends AppCompatActivity {
         viewTable[viewRow][viewCol]=TRANSPARENT;
         setChildViewVisibility(viewRow, viewCol,viewTable[viewRow][viewCol]);
         hintTextView.setText(wonders.get(position).getHint(hintNumber));
-        hintNumber++;
+
 
         // disable showhint button if all hint are shown
-        if (hintNumber>8) {
+        if (hintNumber>=8) {
             hintButton.setClickable(false);
             hintButton.setAlpha(.5f);
         }
@@ -136,6 +203,9 @@ public class MainActivity extends AppCompatActivity {
             Wonder temp = new Wonder(imageList.getResourceId(i,R.drawable.ic_launcher_foreground),wonder_name[i],tempHintArray,tempOptionArray);
             wonders.add(temp);
         }
+        imageList.recycle();
+        hintList.recycle();
+        optionList.recycle();
     }
 
     // set radio button text
@@ -143,6 +213,19 @@ public class MainActivity extends AppCompatActivity {
         for (int i=0; i<4; i++) {
             RadioButton tempRadioButton = (RadioButton) optionRadioGroup.getChildAt(i);
             tempRadioButton.setText(wonders.get(position).getOption(i));
+
         }
+    }
+
+    public void checkResult () {
+        boolean isCorrect = (wonders.get(position).getOption(indexOfSelectedOption)).equals(wonders.get(position).getName());
+        if (isCorrect) {
+            score = score + (10-hintNumber-1);
+            scoreTextView.setText(getString(R.string.score_text,score));
+            nextImage();
+            indexOfSelectedOption=-1;
+            submitButton.setClickable(false);
+            submitButton.setAlpha(0.5f);
+       }
     }
 }

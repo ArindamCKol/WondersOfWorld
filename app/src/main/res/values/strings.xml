@@ -3,6 +3,8 @@
     <string name="hint">Show Hint</string>
     <string name="submit">Submit</string>
     <string name="heading">Identify the Image</string>
+    <string name="score_text">Score : %1d</string>
+    <string name="hintText">Press Show Hint Button to get a hint</string>
 
     <!-- Array of names of Wonder. If new wonder added or any wonder removed
        hints_array, option_array and image_list also need to change. Also need
