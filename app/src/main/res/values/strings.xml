@@ -4,6 +4,7 @@
     <string name="submit">Submit</string>
     <string name="heading">Identify the Image</string>
     <string name="score_text">Score : %1d</string>
+    <string name="correct_answer">You are correct</string>
     <string name="quiz_complete">%1s, congratulations for completing the quiz. your score is %2d out of 100!</string>
     <string name="gameover_text">%1s, congratulation for completing %2d level of the quiz. your score is %3d out of 100! </string>
     <string name="hintText">Press Show Hint Button to get a hint</string>
@@ -12,6 +13,7 @@
     <string name="ok">OK</string>
     <string name="save">Save</string>
     <string name="login_text">Enter your name :</string>
+    <string name="login_fail">We will proceed without a name</string>
     <string name="username_hint">Your Name</string>
     <string name="checkbox_text">Remember me</string>
     <string name="quiz_instruction">How to Play</string>

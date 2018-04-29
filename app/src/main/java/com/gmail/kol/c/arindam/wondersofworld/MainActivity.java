@@ -289,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 indexOfSelectedOption = -1;
                 submitButton.setClickable(false);
                 submitButton.setAlpha(0.5f);
-                Toast.makeText(MainActivity.this , playerName + ", You are correct", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this , (playerName + ", " + getString(R.string.correct_answer)), Toast.LENGTH_SHORT).show();
             }
         }
         else {
@@ -351,7 +351,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 if (nameLength == 0) {
-                    Toast.makeText(MainActivity.this, "We will proceed without a name", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.login_fail), Toast.LENGTH_SHORT ).show();
                 }
             }
         });
