@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_dialog_margin"
+        android:layout_marginRight="@dimen/login_dialog_margin"
+        android:hint="@string/username_hint"/>
+
+    <CheckBox
+        android:id="@+id/save_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_dialog_margin"
+        android:layout_marginRight="@dimen/login_dialog_margin"
+        android:paddingLeft="@dimen/standard_padding"
+        android:text="@string/checkbox_text"/>
+</LinearLayout>

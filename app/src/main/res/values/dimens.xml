@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_dialog_margin">20dp</dimen>
+    <dimen name="standard_padding">8dp</dimen>
+    <dimen name="standard_margin">18dp</dimen>
+    <dimen name="header_text_size">16sp</dimen>
+</resources>

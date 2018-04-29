@@ -17,113 +17,113 @@
 
     <!-- arrays of hints for individual wonder-->
     <string-array name="angkorwat_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>It is largest religious monument in the world</item>
+        <item>It was a Hindu temple dedicated to Lord Vishnu, but later became Buddhist Temple</item>
+        <item>It was built by Khmer King Suryavarman II</item>
+        <item>It was built on early 12th century at Yasodharapura, capital of Khmer Empire</item>
+        <item>This temple designed to represent Mount Meru, home of Devas</item>
+        <item>It’s original name was Vrah Viṣṇuloka</item>
+        <item>In Khmer it name means Temple City</item>
+        <item>Total temple area is 1,626,000 sq.m</item>
+        <item>This temple is symbol of Cambodia, appearing in its National Flag</item>
     </string-array>
     <string-array name="colosseum_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>It is the largest Amphitheatre ever built.</item>
+        <item>Its construction began under the emperor Vespasian in AD 72 and was completed in AD 80 under emperor Titus.</item>
+        <item>Made from stone and concrete, this magnificent monument was built with the man power of tens of thousands of slaves</item>
+        <item>It could hold between 50,000 and 80,000 spectators</item>
+        <item>Its original name was Amphitheatrum Flavium</item>
+        <item>It is used to stage gladiatorial games, animal hunts and mock sea battles</item>
+        <item>It is elliptical in plan and is 189 meters long, and 156 meters wide, with a base area of 24,000 sq. m</item>
+        <item>It was featured in the 2010 video game Assassin's Creed: Brotherhood</item>
+        <item>It is a great tourist attraction in the centre of Rome, Italy</item>
     </string-array>
     <string-array name="greatwall_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>Its original purpose was to defend against incursions by northern nomadic tribes</item>
+        <item>It was built by more than 20 dynasties for 2,500 years from 7th century BC to 19th century AD</item>
+        <item>Total length of this wall is  21,196.18 km</item>
+        <item>The building materials of the walls included the rammed earth, bricks, stones and rocks and glutinous rice flour</item>
+        <item>More than 1,000,000 laborers were recruited for the construction of this huge monument</item>
+        <item>It attracts 50 million visitors every year</item>
+        <item>Most famous part of the wall is built in 220–206 BC by Qin Shi Huang, the first Emperor of China</item>
+        <item>The majority of the existing wall is from the Ming Dynasty (1368–1644)</item>
+        <item>Its chinese name Wanli Changcheng Ten-Thousand Mile Long Wall</item>
     </string-array>
     <string-array name="leaning_tower_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>It took 200 years to build this Bell Tower which might have saved the building from Toppling</item>
+        <item>Its Construction started in August 14, 1173 designed by Bonanno Pisano</item>
+        <item>Tommaso di Andrea Pisano completed its construction in 1372</item>
+        <item>Today this Tower leans at about 3.99 degrees</item>
+        <item>Its maximum tilt was 5.5 degrees</item>
+        <item>Galileo Galilei may dropped two cannonballs of different masses from the tower to demonstrate that their speed of descent was independent of their mass</item>
+        <item>After recent restoration this tower is expected to be stable for next 200 years</item>
+        <item>There are other leaning tower. But it is most famous</item>
+        <item>The tower is situated behind the Pisa Cathedral and is the third oldest structure in the Pisa, Piazza del Duomo</item>
     </string-array>
     <string-array name="machupicchu_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>In the Quechua Indian language, Its name means Old Peak or Old Mountain</item>
+        <item>This monument built on Mountain without help of wheels</item>
+        <item>It has a sacred Intihuatana stone accurately indicates the two equinoxes. Twice a year, the sun sits directly over the stone creating no shadow</item>
+        <item>It was built around 1450–1460 by King Pachacutec Inca Yupanqui</item>
+        <item>It was only used for approximately 80 years before most of its inhabitants died from smallpox</item>
+        <item>It is in Andes Mountain in Peru</item>
+        <item>In 1911 American historian and explorer Hiram Bingham found it by accident</item>
+        <item>It is most visited tourist attraction of Peru</item>
+        <item>It is best preserved Inca Royal city</item>
     </string-array>
     <string-array name="petra_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>In Greek its name means Rock</item>
+        <item>It is also called Al-Batrā in Arabic</item>
+        <item>Constructed around 4th century BCE as the capital of the Nabataean Kingdom</item>
+        <item>it was rediscovered in 1812 by Johann Ludwig Burckhardt</item>
+        <item>To enter this city, one has to pass through a narrow canyon of about 1 km. It is bound by tall cliffs called Al-Siq up to 80 km</item>
+        <item>This city featured in many Hollywood films like Indiana Jones and the Last Crusade, Arabian Nights</item>
+        <item>Another name for this city is the Rose City due to the color of the stone out of which it is carved</item>
+        <item>Al Khazneh or the Treasury is its most famous ruin</item>
+        <item>A revolt of Arabs in was led by Lawrence of Arabia against the Ottoman regime is started here</item>
     </string-array>
     <string-array name="pyramidsofgiza_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>These are the biggest tomb ever build for Kings</item>
+        <item>They were the tallest man-made structure in the world for more than 3,800 years</item>
+        <item>It is by far the oldest of the ancient Wonders and the only one still in existence</item>
+        <item>It is situated at outskirt of Cairo, Capital of Egypt</item>
+        <item>Biggest of three was built in 2560–2540 BC as tomb of pharaoh Khufu</item>
+        <item>Other Two are tomb of pharaoh Khafre and Menkaure</item>
+        <item>It is claimed that they are precisely aligned with the Constellation of Orion</item>
+        <item>As per Greek historian Herodotus this tombs had taken 400,000 men 20 years to build, working in three-month shifts 100,000 men at a time</item>
+        <item>This are the Symbol of Egypt for thousands of year</item>
     </string-array>
     <string-array name="tajmahal_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>It is known as greatest monument of love</item>
+        <item>Rabindranath Tagore described it as 'a tear on the face of eternity'</item>
+        <item>Every day 12,000 visitor come visit this monument</item>
+        <item>Persian architect Ustad Ahmad Lahori said to be chief architect of this building</item>
+        <item>It was commissioned in 1632 and completed in 1653</item>
+        <item>It’s building material is white marble inlaid with semi-precious stones</item>
+        <item>Its building cost estimated at the time to be around 32 million rupees. Current approximate value will be 52.8 billion rupees</item>
+        <item>It is situated in the bank of river Yamuna in the city of Agra</item>
+        <item>It was commissioned by Shah Jahan to be built in the memory of his wife Mumtaz Mahal</item>
     </string-array>
     <string-array name="teotihuacan_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>Name this city in Aztec means birthplace of the gods</item>
+        <item>It was the largest urban center of Mesoamerica housed a population of 150,000 people</item>
+        <item>The city is thought to have been established around 100 BC</item>
+        <item>It is the most visited archaeological site in Mexico</item>
+        <item>It is situated approximately 40 kilometres northeast of Mexico City</item>
+        <item>Largest building of this city is the Pyramid of the Sun</item>
+        <item>The original name and builder of the city is unknown</item>
+        <item>During Aztec times, the city was a place of pilgrimage and identified with the myth of Tollan, the place where the sun was created</item>
+        <item>The city's broad central avenue, called Avenue of the Dead</item>
     </string-array>
     <string-array name="tigernest_hints">
-        <item>Hint1</item>
-        <item>Hint2</item>
-        <item>Hint3</item>
-        <item>Hint4</item>
-        <item>Hint5</item>
-        <item>Hint6</item>
-        <item>Hint7</item>
-        <item>Hint8</item>
-        <item>Hint9</item>
+        <item>It is also known as the Taktsang Palphug Monastery</item>
+        <item>It is build around a cave where Guru Padmasambhava is said to have meditated for three years, three months, three weeks, three days and three hours in the 8th century</item>
+        <item>It is built in 1692 by Gyalse Tenzin Rabgye</item>
+        <item>It hangs on a precarious cliff at 900 metres above the Paro valley</item>
+        <item>The monks who practice Vajrayana Buddhism at this cave monastery live here for three years and seldom go down to the Paro valley</item>
+        <item>This monastery buildings consist of four main temples and residential shelters</item>
+        <item>In 2015, the Duke and Duchess of Cambridge, Prince William and Kate Middleton made the trek to the monastery while visiting Bhutan</item>
+        <item>In 2005 this Monastery is rebuild after destroyed by fire in 1998</item>
+        <item>It has become cultural Icon of Bhutan</item>
     </string-array>
 </resources>

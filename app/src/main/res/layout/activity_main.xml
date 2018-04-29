@@ -13,23 +13,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary">
             <TextView
                 android:text="@string/heading"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content" />
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                style="@style/header_text"
+                />
+            <TextView
+                android:id="@+id/instruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/header_text"
+                android:text="@string/quiz_instruction"/>
             <TextView
                 android:id="@+id/score_text"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/standard_margin"
+                style="@style/header_text"
                 android:gravity="right"/>
         </LinearLayout>
         <com.gmail.kol.c.arindam.wondersofworld.SquareLayout
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:layout_marginLeft="@dimen/standard_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="2dp"
@@ -90,36 +102,37 @@
             android:id="@+id/show_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
             android:text="@string/hint" />
 
         <TextView
             android:id="@+id/hint_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
             android:singleLine="false"/>
 
         <RadioGroup
             android:id="@+id/options_radio_group"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin">
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                style="@style/radio_button_style" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                style="@style/radio_button_style"/>
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                style="@style/radio_button_style" />
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                style="@style/radio_button_style" />
         </RadioGroup>
 
         <Button
             android:id="@+id/submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
             android:text="@string/submit"/>
 
     </LinearLayout>
