@@ -8,6 +8,8 @@ import android.content.res.TypedArray;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -57,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView scoreTextView;
     private TextView instructionTextView;
     private LinearLayout rootLayout;
+    private LinearLayout checkboxGroup;
+    private LinearLayout textviewGroup;
+    private EditText textAnswer;
     private Button hintButton;
     private Button submitButton;
 
@@ -76,6 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setWondersData();
         // initialise views
         rootLayout = findViewById(R.id.root_layout);
+        checkboxGroup = findViewById(R.id.checkbox_group);
+        textviewGroup = findViewById(R.id.text_answer_group);
         optionRadioGroup = findViewById(R.id.options_radio_group);
         hintTextView = findViewById(R.id.hint_textview);
         scoreTextView = findViewById(R.id.score_text);
@@ -83,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         hintButton = findViewById(R.id.show_hint);
         submitButton = findViewById(R.id.submit_button);
         mImageView = findViewById(R.id.image);
+        textAnswer = findViewById(R.id.text_answer);
 
         //if instance changed load data
         if (savedInstanceState != null) {
@@ -150,6 +158,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 submitButton.setAlpha(1f);
             }
         });
+
+        textAnswer.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {  }
+
+            @Override
+            public void onTextChanged(CharSequence answer, int i, int i1, int i2) {
+                if(answer.toString().trim().length()>0) {
+                    submitButton.setClickable(true);
+                    submitButton.setAlpha(1f);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {}
+        });
+
         //attach click listener to views
         instructionTextView.setOnClickListener(this);
         hintButton.setOnClickListener(this);
@@ -157,6 +182,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //disable submit button
         submitButton.setClickable(false);
         submitButton.setAlpha(0.5f);
+    }
+
+    public void checkBoxClicked (View view) {
+        submitButton.setClickable(true);
+        submitButton.setAlpha(1f);
     }
 
     //handle button click
@@ -251,6 +281,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void setWondersData () {
         Resources res = getResources();
         String [] wonder_name = res.getStringArray(R.array.wonder_names);
+        String [] answer_type = res.getStringArray(R.array.answer_type);
         TypedArray imageList = res.obtainTypedArray(R.array.image_list); // load image ID
         TypedArray hintList = res.obtainTypedArray(R.array.hints);
         TypedArray optionList = res.obtainTypedArray(R.array.radiogroup_options);
@@ -258,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i=0; i<10; i++) {
             String [] tempHintArray = res.getStringArray(hintList.getResourceId(i,0)); // load hint array
             String [] tempOptionArray = res.getStringArray(optionList.getResourceId(i,0)); // load option array
-            Wonder temp = new Wonder(imageList.getResourceId(i,R.drawable.ic_launcher_foreground),wonder_name[i],tempHintArray,tempOptionArray);
+            Wonder temp = new Wonder(imageList.getResourceId(i,R.drawable.ic_launcher_foreground),wonder_name[i],answer_type[i],tempHintArray,tempOptionArray);
             wonders.add(temp);
         }
         imageList.recycle();
@@ -268,15 +299,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // set radio button text
     public void setOption () {
-        for (int i=0; i<4; i++) {
-            RadioButton tempRadioButton = (RadioButton) optionRadioGroup.getChildAt(i);
-            tempRadioButton.setText(wonders.get(position).getOption(i));
+        switch (wonders.get(position).getAnswerType()) {
+            case "radio_button" :
+                for (int i=0; i<4; i++) {
+                    RadioButton tempRadioButton = (RadioButton) optionRadioGroup.getChildAt(i);
+                    tempRadioButton.setText(wonders.get(position).getOption(i));
+                }
+                optionRadioGroup.setVisibility(View.VISIBLE);
+                textviewGroup.setVisibility(View.GONE);
+                checkboxGroup.setVisibility(View.GONE);
+                break;
+            case "text_view" :
+                for (int i=0; i<4; i++) {
+                    TextView tempTextView = (TextView) textviewGroup.getChildAt(i);
+                    tempTextView.setText(wonders.get(position).getOption(i));
+                }
+                optionRadioGroup.setVisibility(View.GONE);
+                textviewGroup.setVisibility(View.VISIBLE);
+                checkboxGroup.setVisibility(View.GONE);
+                break;
+            case "check_box" :
+                for (int i=0; i<4; i++) {
+                    CheckBox tempCheckBox = (CheckBox) checkboxGroup.getChildAt(i);
+                    tempCheckBox.setText(wonders.get(position).getOption(i));
+                }
+                optionRadioGroup.setVisibility(View.GONE);
+                textviewGroup.setVisibility(View.GONE);
+                checkboxGroup.setVisibility(View.VISIBLE);
+                break;
         }
     }
 
     //check answer
     public void checkResult () {
-        boolean isCorrect = (wonders.get(position).getOption(indexOfSelectedOption)).equals(wonders.get(position).getName());
+        boolean isCorrect = false;
+
+        switch (wonders.get(position).getAnswerType()) {
+            case "radio_button" :
+                isCorrect = (wonders.get(position).getOption(indexOfSelectedOption)).equals(wonders.get(position).getName());
+                break;
+            case "text_view" :
+                String answerText = textAnswer.getText().toString().trim().toLowerCase();
+                String questionText = wonders.get(position).getName().toLowerCase();
+                isCorrect = answerText.equals(questionText);
+                break;
+            case "check_box" :
+                CheckBox answer1CheckBox = (CheckBox) checkboxGroup.getChildAt(0);
+                CheckBox answer2CheckBox = (CheckBox) checkboxGroup.getChildAt(1);
+                if (answer1CheckBox.isChecked() && answer2CheckBox.isChecked()) { isCorrect=true;}
+                break;
+        }
+
         if (isCorrect) {
             score = score + (10 - hintNumber - 1);
             if (position>=9) {

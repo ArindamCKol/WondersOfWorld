@@ -20,8 +20,8 @@
     <string name="instruction_message">Objective of the Quiz is to recognize hidden image by selecting and submitting correct option.
         \nRules are simple.\n
         \n1. If you recognize image without using any hints, you get 10 point.\n
-        \n2. If you take hint then part of image is show and a hint is given. Also 1 point deducted.\n
-        \n3. if you all the hint then whole image is shown. But you get 1 point only.\n
+        \n2. If you take hint then part of image is shown and a hint is given. Also 1 point deducted.\n
+        \n3. if you use all the hint then whole image is shown. But you get 1 point only.\n
         \n4. If you submit wrong answer then quiz ends.\n
         \nEnjoy!! </string>
 
@@ -56,4 +56,17 @@
         <item>@drawable/tigersnest</item>
     </array>
 
+    <!-- Image ID array -->
+    <array name="answer_type">
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>radio_button</item>
+        <item>text_view</item>
+        <item>radio_button</item>
+        <item>check_box</item>
+    </array>
 </resources>

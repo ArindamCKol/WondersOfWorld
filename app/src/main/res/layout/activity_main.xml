@@ -117,7 +117,8 @@
             android:id="@+id/options_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/standard_margin">
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:visibility="visible">
             <RadioButton
                 style="@style/radio_button_style" />
             <RadioButton
@@ -127,6 +128,51 @@
             <RadioButton
                 style="@style/radio_button_style" />
         </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/checkbox_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <CheckBox
+                style="@style/radio_button_style"
+                android:onClick="checkBoxClicked"/>
+            <CheckBox
+                style="@style/radio_button_style"
+                android:onClick="checkBoxClicked"/>
+            <CheckBox
+                style="@style/radio_button_style"
+                android:onClick="checkBoxClicked"/>
+            <CheckBox
+                style="@style/radio_button_style"
+                android:onClick="checkBoxClicked"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/text_answer_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:drawableLeft="@drawable/star"
+                style="@style/radio_button_style" />
+            <TextView
+                android:drawableLeft="@drawable/star"
+                style="@style/radio_button_style" />
+            <TextView
+                android:drawableLeft="@drawable/star"
+                style="@style/radio_button_style" />
+            <TextView
+                android:drawableLeft="@drawable/star"
+                style="@style/radio_button_style" />
+            <EditText
+                android:id="@+id/text_answer"
+                style="@style/radio_button_style" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/submit_button"
