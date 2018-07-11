@@ -113,6 +113,16 @@
             android:layout_marginRight="@dimen/standard_margin"
             android:singleLine="false"/>
 
+        <TextView
+            android:id="@+id/checkbox_answer_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/standard_margin"
+            android:text="@string/checkbox_hint"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
         <RadioGroup
             android:id="@+id/options_radio_group"
             android:layout_width="match_parent"
@@ -159,19 +169,20 @@
             android:visibility="gone">
             <TextView
                 android:drawableLeft="@drawable/star"
-                style="@style/radio_button_style" />
+                style="@style/textview_style" />
             <TextView
                 android:drawableLeft="@drawable/star"
-                style="@style/radio_button_style" />
+                style="@style/textview_style" />
             <TextView
                 android:drawableLeft="@drawable/star"
-                style="@style/radio_button_style" />
+                style="@style/textview_style" />
             <TextView
                 android:drawableLeft="@drawable/star"
-                style="@style/radio_button_style" />
+                style="@style/textview_style" />
             <EditText
                 android:id="@+id/text_answer"
-                style="@style/radio_button_style" />
+                android:hint="@string/edit_text_hint"
+                style="@style/textview_style" />
         </LinearLayout>
 
         <Button

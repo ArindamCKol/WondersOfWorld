@@ -10,17 +10,30 @@
 
     <!-- style for view widget -->
     <style name="view_style" >
-    <item name="android:layout_width">0dp</item>
-    <item name="android:layout_height">match_parent</item>
-    <item name="android:layout_weight">1</item>
-    <item name="android:background">@color/colorLight</item>
-    <item name="android:alpha">0.92</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorLight</item>
+        <item name="android:alpha">0.92</item>
     </style>
 
     <!-- radio button style -->
     <style name="radio_button_style" >
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- check box style -->
+    <style name="check_box_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- text view style -->
+    <style name="textview_style" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
     </style>
 
     <!-- header text style -->

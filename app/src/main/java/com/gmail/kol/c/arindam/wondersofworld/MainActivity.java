@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView hintTextView;
     private TextView scoreTextView;
     private TextView instructionTextView;
+    private TextView checkBoxAnswerHint;
     private LinearLayout rootLayout;
     private LinearLayout checkboxGroup;
     private LinearLayout textviewGroup;
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         hintTextView = findViewById(R.id.hint_textview);
         scoreTextView = findViewById(R.id.score_text);
         instructionTextView = findViewById(R.id.instruction);
+        checkBoxAnswerHint = findViewById(R.id.checkbox_answer_hint);
         hintButton = findViewById(R.id.show_hint);
         submitButton = findViewById(R.id.submit_button);
         mImageView = findViewById(R.id.image);
@@ -308,6 +310,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 optionRadioGroup.setVisibility(View.VISIBLE);
                 textviewGroup.setVisibility(View.GONE);
                 checkboxGroup.setVisibility(View.GONE);
+                checkBoxAnswerHint.setVisibility(View.GONE);
                 break;
             case "text_view" :
                 for (int i=0; i<4; i++) {
@@ -317,6 +320,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 optionRadioGroup.setVisibility(View.GONE);
                 textviewGroup.setVisibility(View.VISIBLE);
                 checkboxGroup.setVisibility(View.GONE);
+                checkBoxAnswerHint.setVisibility(View.GONE);
                 break;
             case "check_box" :
                 for (int i=0; i<4; i++) {
@@ -326,6 +330,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 optionRadioGroup.setVisibility(View.GONE);
                 textviewGroup.setVisibility(View.GONE);
                 checkboxGroup.setVisibility(View.VISIBLE);
+                checkBoxAnswerHint.setVisibility(View.VISIBLE);
                 break;
         }
     }
@@ -425,6 +430,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (nameLength == 0) {
                     Toast.makeText(MainActivity.this, getString(R.string.login_fail), Toast.LENGTH_SHORT ).show();
+                    playerName = "X";
                 }
             }
         });

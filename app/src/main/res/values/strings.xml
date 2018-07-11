@@ -17,6 +17,8 @@
     <string name="username_hint">Your Name</string>
     <string name="checkbox_text">Remember me</string>
     <string name="quiz_instruction">How to Play</string>
+    <string name="checkbox_hint">This question has two answer</string>
+    <string name="edit_text_hint">Enter your answer</string>
     <string name="instruction_message">Objective of the Quiz is to recognize hidden image by selecting and submitting correct option.
         \nRules are simple.\n
         \n1. If you recognize image without using any hints, you get 10 point.\n

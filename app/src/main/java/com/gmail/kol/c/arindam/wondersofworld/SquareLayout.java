@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 /**
  * Created by ARINDAM on 27-03-2018.
  */
- //build a square relative layout
+ //build a square relative layout. I have taken help from stackoverflow for below code.
 
 public class SquareLayout extends RelativeLayout {
     public SquareLayout(Context context) {
