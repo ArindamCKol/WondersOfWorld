@@ -370,7 +370,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 indexOfSelectedOption = -1;
                 submitButton.setClickable(false);
                 submitButton.setAlpha(0.5f);
-                Toast.makeText(MainActivity.this , (playerName + ", " + getString(R.string.correct_answer)), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this , (playerName + ", " + getString(R.string.correct_answer) + ", " + getString(R.string.score_text,score)), Toast.LENGTH_SHORT).show();
             }
         }
         else {
