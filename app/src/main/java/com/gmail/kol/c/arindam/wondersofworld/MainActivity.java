@@ -351,7 +351,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case "check_box" :
                 CheckBox answer1CheckBox = (CheckBox) checkboxGroup.getChildAt(0);
                 CheckBox answer2CheckBox = (CheckBox) checkboxGroup.getChildAt(1);
-                if (answer1CheckBox.isChecked() && answer2CheckBox.isChecked()) { isCorrect=true;}
+                CheckBox answer3CheckBox = (CheckBox) checkboxGroup.getChildAt(2);
+                CheckBox answer4CheckBox = (CheckBox) checkboxGroup.getChildAt(3);
+                if (answer1CheckBox.isChecked() && answer2CheckBox.isChecked() && !answer3CheckBox.isChecked() && !answer4CheckBox.isChecked()) { isCorrect=true;}
                 break;
         }
 
@@ -359,6 +361,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             score = score + (10 - hintNumber - 1);
             if (position>=9) {
                 isGameOver = true;
+                Toast.makeText(MainActivity.this , getString(R.string.quiz_complete, playerName,score), Toast.LENGTH_SHORT).show();
                 gameoverMessage = getString(R.string.quiz_complete, playerName,score);
                 gameOverAlert(gameoverMessage);
             } else {
@@ -372,6 +375,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else {
             isGameOver = true;
+            Toast.makeText(MainActivity.this , getString(R.string.gameover_text, playerName,position,score), Toast.LENGTH_SHORT).show();
             gameoverMessage = getString(R.string.gameover_text, playerName,position,score);
             gameOverAlert(gameoverMessage);
         }
